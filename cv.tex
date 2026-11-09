@@ -1,0 +1,92 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{modern}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{primary}{theme-black}
+
+% Set false if you don't want to highlight section with primary color
+\setbool{themeSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[super]{nth}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\name{Mohammadreza}{Motabar}
+% \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
+\address{Tehran, Iran}
+
+%\mobile{000000000000}
+\email{mohammadrezamotabar@gmail.com}
+%\dateofbirth{January 1st, 1970}
+\homepage{mrmotabar.github.io} 
+\github{mrmotabar}
+\linkedin{mrmotabar}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{medium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Simplicity is deceptively complicated."}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+{}
+{Mohammadreza Motabar}
+{\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+
+\input{sections/education.tex}
+\input{sections/research-interests.tex}
+\input{sections/honors.tex}
+\input{sections/research.tex}
+\input{sections/coursework.tex}
+\newpage
+\input{sections/teaching.tex}
+\input{sections/presentations.tex}
+\input{sections/projects.tex}
+\newpage
+\input{sections/experience.tex}
+\input{sections/certifications.tex}
+\input{sections/volunteering.tex}
+% \input{sections/skills.tex}
+\input{sections/languages.tex}
+% \input{sections/interests.tex}
+% \input{sections/references.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}
